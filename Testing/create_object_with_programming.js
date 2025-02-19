@@ -116,4 +116,30 @@ company.addProjectToEmployee('Ma Ma', 'Online Learning System');
 company.displayCompanyInfo();
 
 
+//i wanna get student information with switch case with function and then if get A,it is perfect A+,if get B,it is perfect B+,if get C,D.E,F it is fail
+
+
+
+function getGrade(score) {
+    switch (true) {
+        case (score > 80):
+            return "A";
+        case (score > 70):
+            return "B";
+        case (score > 60):
+            return "C";
+        case (score > 50):
+            return "D";
+        default:
+            return "E";
+    }
+}
+
+// Example Usage
+console.log(getGrade(85)); // A 
+console.log(getGrade(78)); // B
+console.log(getGrade(65)); // C
+console.log(getGrade(55)); // D
+console.log(getGrade(45)); // E
+
 
