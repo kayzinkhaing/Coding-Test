@@ -42,3 +42,25 @@ const deserializedData = JSON.parse(serializedData);
 // 3️⃣ Print both
 console.log("Serialized:", serializedData);
 console.log("Deserialized:", deserializedData);
+
+
+// Custom sort function (bubble sort) without using the built-in sort method
+function customSort(arr) {
+    for (let i = 0; i < arr.length - 1; i++) {
+        for (let j = 0; j < arr.length - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                // Swap elements
+                let temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    return arr;
+}
+
+const unsortedArray = [5, 2, 9, 1, 5, 6];
+const sortedArray = customSort(unsortedArray.slice()); 
+console.log("Unsorted:", unsortedArray);
+console.log("Sorted:", sortedArray);
+
